@@ -31,7 +31,7 @@
                 </a>
             </div>
             <ul class="menu">
-                <li><a href="home.html" class="menu-btn">Home</a></li>
+                <li><a href="index.html" class="menu-btn">Home</a></li>
                 <li><a href="#home" class="menu-btn">Academy</a></li>
                 <li><a href="#training" class="menu-btn">Training</a></li>
                 <li><a href="#pricing" class="menu-btn">Pricing</a></li>
@@ -70,6 +70,8 @@
         <h3>Rici</h3>
         <p>Expert in network security, threat analysis, and data protection, ensuring system integrity at all levels.</p>
       </div>
+      </div>
+<div class="extra-team-members" style="display: none;">
       <div class="team-member">
         <img src="images/player3.png" alt="Cyber Security Specialist">
         <h3>Rici</h3>
@@ -97,6 +99,7 @@
       </div>
     </div>
   </div>
+    <button id="see-more-btn" class="see-more-btn">See More</button>
 </section>
 
     <!-- Contact section -->
@@ -195,6 +198,20 @@
         </span>
       </div>
     </footer>
+    <script>
+document.getElementById("see-more-btn").addEventListener("click", function() {
+    const extra = document.querySelector(".extra-team-members");
+    if (extra.style.display === "none") {
+        extra.style.display = "grid"; // reveal
+        this.innerText = "See Less";
+    } else {
+        extra.style.display = "none"; // hide again
+        this.innerText = "See More";
+        window.scrollTo({ top: document.getElementById("team").offsetTop - 100, behavior: "smooth" });
+    }
+});
+</script>
+
         <script src="script.js"></script>
   </body>
 </html>
