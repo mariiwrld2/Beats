@@ -1,0 +1,467 @@
+body {
+  margin: 0;
+  font-family: Tahoma, Geneva, Verdana, sans-serif;
+  background: #f3f4f6;
+  color: #222;
+}
+
+/* Section Wrapper */
+.why-choose-us {
+  padding: 100px 20px;
+  background: linear-gradient(135deg, #ffffff 0%, #1458ab 100%);
+  text-align: center;
+}
+
+/* Section Title */
+.why-choose-us .title {
+  font-size: 2.8rem;
+  margin-bottom: 15px;
+  font-weight: 700;
+  color: #111;
+}
+
+.why-choose-us .title span {
+  color: #1458ab; 
+}
+
+.why-choose-us .subtitle {
+  font-size: 1.1rem;
+  color: #555;
+  margin-bottom: 50px;
+}
+
+/* Grid Layout */
+.choose-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 35px;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 10px;
+}
+
+/* Each Card */
+.choose-item {
+  display: block;
+  background: #fff;
+  padding: 40px 25px;
+  border-radius: 14px;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.08);
+  transition: all 0.35s ease;
+  position: relative;
+  overflow: hidden;
+  text-decoration: none;
+  color: inherit;
+}
+
+.choose-item:visited {
+  color: inherit;
+  text-decoration: none;
+}
+
+.choose-item:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 12px 30px rgba(0,0,0,0.15);
+}
+
+/* Animated border highlight */
+.choose-item::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  border: 3px solid transparent;
+  border-radius: 14px;
+  transition: border-color 0.3s ease;
+}
+
+.choose-item:hover::before {
+  border-color: #1458ab;
+}
+
+/* Icons */
+.choose-item i {
+  font-size: 2.5rem;
+  color: #1458ab;
+  margin-bottom: 20px;
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.choose-item:hover i {
+  transform: scale(1.15);
+  color: #1458ab;
+}
+
+/* Headings & Text */
+.choose-item h3 {
+  font-size: 1.4rem;
+  margin-bottom: 12px;
+  color: #222;
+}
+
+.choose-item p {
+  font-size: 1rem;
+  color: #555;
+  line-height: 1.6;
+}
+
+/* Academy Overview Section */
+.academy-overview {
+  padding: 100px 20px;
+  background: linear-gradient(135deg, #f9f9f9 0%, #ffffff 100%);
+  text-align: center;
+}
+
+.academy-overview .title {
+  font-size: 2.8rem;
+  margin-bottom: 15px;
+  font-weight: 700;
+  color: #111;
+}
+
+.academy-overview .title span {
+  color: #1458ab;
+}
+
+.academy-overview .subtitle {
+  font-size: 1.1rem;
+  color: #555;
+  margin-bottom: 50px;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.overview-grid {
+  display: grid;
+  grid-template-columns: 1fr; /* Stack on all sizes for flow */
+  gap: 50px;
+  max-width: 1100px;
+  margin: 0 auto;
+  align-items: start; /* Align top for better flow */
+}
+@media (min-width: 768px) {
+  .overview-grid {
+    grid-template-columns: 1fr 1fr; /* Side-by-side on larger screens */
+    align-items: stretch;
+  }
+  .overview-left { order: 1; } /* Text/video first */
+  .overview-right { order: 2; grid-row: 1 / -1; } /* Stats span height */
+}
+.video-wrapper {
+  height: 50vh; /* Taller for impact */
+  grid-column: 1 / -1; /* Full width on mobile */
+}
+.stats-grid {
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); /* More flexible */
+  gap: 20px;
+}
+.stat-card h3 { /* Animate-ready */
+  font-size: 2.5rem; /* Bolder */
+}
+.mission-text {
+  margin-bottom: 30px;
+}
+
+.mission-text p {
+  font-size: 1.1rem;
+  color: #555;
+  line-height: 1.7;
+  margin-bottom: 20px;
+}
+
+.explore-btn {
+  display: inline-block;
+  background: #1458ab;
+  color: #fff;
+  font-size: 18px;
+  padding: 12px 30px;
+  border-radius: 6px;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  text-decoration: none;
+}
+
+.explore-btn:hover {
+  background: none;
+  color: #1458ab;
+  border: 2px solid #1458ab;
+  transform: translateY(-2px);
+}
+
+.video-wrapper {
+  position: relative;
+  border-radius: 14px;
+  overflow: hidden;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.1);
+  width: 100%;
+  height :45vh;
+  background: linear-gradient(135deg, #f9f9f9 0%, #ffffff 100%);
+  cursor: pointer
+}
+
+.video-wrapper video {
+  position: absolute;  /* Absolute to fill wrapper exactly */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;  /* Crop/scale to cover without gaps */
+  transition: transform 0.3s ease;
+}
+
+.video-wrapper:hover video {
+  transform: scale(1.02);
+}
+
+.video-control {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: rgba(20, 88, 171, 0.85);  /* Semi-transparent #1458ab */
+  border: none;
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  font-size: 20px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  opacity: 0;
+  z-index: 10;
+}
+
+video-wrapper:hover .video-control,
+.video-control:focus {
+  opacity: 1;  /* Show on hover/focus for accessibility */
+}
+
+.video-control:hover {
+  background: rgba(20, 88, 171, 1);  /* Solid on hover */
+  transform: translate(-50%, -50%) scale(1.1);
+  opacity: 1;
+}
+
+.video-control i {
+  transition: transform 0.2s ease, opacity 0.3s ease;
+}
+
+.video-control:hover i {
+  transform: scale(1.2);
+}
+
+/* Hide button after a delay if video is playing (optional: reduces visual clutter) */
+.video-wrapper:hover .video-control,
+.video-control:focus {
+  opacity: 1;  /* Show on hover/focus for accessibility */
+}
+
+.overview-right {
+  display: flex;
+  justify-content: center;
+}
+
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 25px;
+  width: 100%;
+}
+
+.stat-card {
+  background: #fff;
+  padding: 30px 20px;
+  border-radius: 14px;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.08);
+  transition: all 0.3s ease;
+  text-align: center;
+}
+
+.stat-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 30px rgba(0,0,0,0.15);
+}
+
+.stat-card i {
+  font-size: 2.5rem;
+  color: #1458ab;
+  margin-bottom: 15px;
+  display: block;
+}
+
+.stat-card h3 {
+  font-size: 2.2rem;
+  color: #222;
+  margin-bottom: 8px;
+  font-weight: 700;
+}
+
+.stat-card p {
+  font-size: 0.95rem;
+  color: #555;
+  margin: 0;
+}
+
+/* Contact Section Styles (modular version) */
+
+.contact-section {
+  background: linear-gradient(135deg, #ffffff 0%, #1458ab 100%);
+  color: #030303;
+  padding: 80px 20px;
+  box-shadow: 0 5px 25px rgba(0,0,0,0.2);
+  border-radius: 0; /* keep clean edge when stacked in a page */
+  min-height: auto; /* removed full-screen height */
+  font-family: "Open Sans", sans-serif;
+  text-align: center;
+
+}
+
+/* General container */
+.contact-section .container {
+  max-width: 1100px;
+  margin: auto;
+}
+
+/* Headings */
+.contact-section h1 {
+  font-size: 3rem;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.contact-section .subtitle {
+  color: #fcd3b5;
+  margin-bottom: 50px;
+  line-height: 1.6;
+}
+
+/* Layout grid */
+.contact-section .contact-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 40px;
+}
+
+/* Contact boxes */
+.contact-section .contact-box h2 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+}
+
+.contact-section hr {
+  border: none;
+  height: 4px;
+  background-color: #ffff;
+  margin-bottom: 20px;
+}
+
+/* Text and links */
+.contact-section .contact-box a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.contact-section .contact-box h2 + hr + p + p,
+.contact-section .contact-box h2 + hr + p + p + p,
+.contact-section .contact-box a {
+  color: #fcd3b5;
+}
+
+.contact-section .contact-box:last-child p {
+  color: #fff;
+}
+
+.contact-section .contact-box p {
+  line-height: 1.6;
+}
+
+.contact-section .contact-box i {
+  margin-right: 8px;
+}
+
+/* Form */
+.contact-section form input,
+.contact-section form textarea {
+  width: 100%;
+  padding: 12px;
+  border: none;
+  margin-bottom: 12px;
+  border-radius: 3px;
+  background-color: rgba(255,255,255,0.3);
+  color: #fff;
+  font-size: 1rem;
+}
+
+.contact-section form input::placeholder,
+.contact-section form textarea::placeholder {
+  color: rgba(0, 0, 0, 0.7) !important;
+}
+
+.contact-section form textarea {
+  height: 100px;
+  resize: none;
+}
+
+.contact-section form button {
+  background-color: #fff;
+  color: #f26c20;
+  border: none;
+  padding: 10px 25px;
+  border-radius: 3px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.contact-section form button:hover {
+  background-color: #ffd9c2;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .contact-section h1 {
+    font-size: 2.2rem;
+  }
+  .contact-section .contact-grid {
+    gap: 20px;
+  }
+}
+/* === CONTACT SECTION FIX: make all text black === */
+
+.contact-section,
+.contact-section p,
+.contact-section h1,
+.contact-section h2,
+.contact-section h3,
+.contact-section a,
+.contact-section strong,
+.contact-section span {
+    color: #555 !important;
+}
+
+/* Remove the peach tint */
+.contact-section .subtitle,
+.contact-section .contact-box a,
+.contact-section .contact-box p {
+    color: #555 !important;
+}
+/* Contact Section – Make Submit button match Explore Programs */
+.contact-section form button {
+    background: #1458ab !important;
+    color: #fff !important;
+    font-size: 18px;
+    padding: 12px 30px;
+    border-radius: 6px;
+    font-weight: 500;
+    border: 2px solid #1458ab;
+    transition: all 0.3s ease;
+}
+
+.contact-section form button:hover {
+    background: none !important;
+    color: #1458ab !important;
+    transform: translateY(-2px);
+}

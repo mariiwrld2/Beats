@@ -1,0 +1,464 @@
+/* This loads 'poppins font' from google fonts to use in site */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap");
+
+/* resets default margin & padding as well as ensuring consistent sizing 
+Makes 'Poppins' default font */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+/* ensures smooth scrolling when clicking anchor like #services */
+html {
+  scroll-behavior: smooth;
+}
+
+/* sets background to light grey */
+body {
+  background: #f2f2f2;
+}
+
+/* fixed nav bar at top with a dark background & a high z-index
+so it stays above content */
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 5;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  background: #333;
+}
+
+/* create spacing below fixed navbar so content isn't hidden */
+.page-start {
+  padding-top: 50px;
+}
+
+/* centers content & adds vertical spacing */
+section {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+section h2 {
+  font-size: 2rem;
+}
+
+section > p {
+  text-align: center;
+}
+
+
+/* responsive layout for two side-by-side columns inside contact section */
+.contact .row {
+    margin: 60px 0 90px;
+    display: flex;
+    max-width: 1200px;
+    width: 100%;
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+  /* defines column width & adds horizontal spacing */
+  .contact .row .col {
+    padding: 0 10px;
+    width: calc(100% / 2 - 50px);
+  }
+  
+  .contact .col p {
+    margin-bottom: 10px;
+  }
+  
+  .contact .col p i {
+    color: #7a7a7a;
+    margin-right: 10px;
+  }
+  
+  /* styles input fields in contact form */
+  .contact form input {
+    height: 45px;
+    margin-bottom: 20px;
+    padding: 10px;
+    width: 100%;
+    font-size: 16px;
+    outline: none;
+    border: 1px solid #bfbfbf;
+  }
+  
+  /* creates styled, resizable message box in form */
+  .contact form textarea {
+    padding: 10px;
+    width: 100%;
+    font-size: 16px;
+    height: 150px;
+    outline: none;
+    resize: vertical;
+    border: 1px solid #bfbfbf;
+  }
+  
+  /* styles send button */
+  .contact form button {
+    margin-top: 10px;
+    padding: 10px 20px;
+    font-size: 17px;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    background: #f39196;
+    transition: 0.8s ease;
+    box-shadow: 0 10px 20px rgba(128, 128, 128, 0.5); /* Grey glow */
+  }
+  
+  .contact form button:hover {
+    color: #ebf4f6;
+    background: #43c0e9;
+    box-shadow: 0 10px 20px rgba(40, 37, 237, 0.91); /* Light pink glow */
+  }
+
+  /* full-width black footer with padding & spacing above */
+  footer {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    background: #000;
+    padding: 20px 0;
+    margin-top: 60px;
+  }
+  
+  footer div {
+    padding: 0 10px;
+    max-width: 1200px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  footer span {
+    color: #fff;
+  }
+  
+  footer a {
+    padding: 0;
+  }
+  
+  /* turns nav menu to slide-in side menu, starts off hidden then takes
+  full height of screen with dark background to match desktop navbar */
+  @media screen and (max-width: 860px) {
+    .navbar .all-links {
+      background: #333;
+    }
+  
+    .homepage .content h1 {
+      font-size: 40px;
+      font-weight: 700;
+      margin-bottom: 10px;
+    }
+  
+    .homepage .content .text {
+      font-size: 17px;
+    }
+  
+    .content a {
+      font-size: 17px;
+      padding: 9px 20px;
+    }
+  
+  /* stacks vertically instead of horizontally */
+    .contact .row {
+      flex-direction: column;
+    }
+  
+    .contact .row .col {
+      width: 100%;
+    }
+  
+    .contact .row .col:last-child {
+      margin-top: 40px;
+    }
+  
+    footer a {
+      height: 0;
+    }
+  }
+  
+  @media screen and (max-width: 560px) {
+    section .cards .card {
+      width: 100%;
+      margin-bottom: 30px;
+    }
+  }
+
+  .fa-map-marker-alt {
+    cursor: pointer;
+  }
+  
+  /* This loads 'poppins font' from google fonts to use in site */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap");
+
+/* resets default margin & padding as well as ensuring consistent sizing 
+Makes 'poppins' default font */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif !important;
+}
+
+body, header, nav, section, footer, h1, h2, h3, p, ul, li {
+  font-family: "Poppins", sans-serif !important;
+}
+
+/* ensures smooth scrolling when clicking anchor like #services */
+html {
+  scroll-behavior: smooth;
+}
+
+/* sets background to light grey */
+body {
+  background: #f2f2f2;
+}
+
+/* fixed nav bar at top with a dark background & a high z-index
+so it stays above content */
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 5;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  background: #333;
+}
+
+/* flex box layout to space logo & links. Has responsive width control as well */
+.navbar {
+  display: flex;
+  padding: 0 10px;
+  max-width: 12000px;
+  width: 100%;
+  height: 80px;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* hides checkbox used to toggle mobile menu */
+.navbar input#menu-toggler {
+  display: none;
+}
+
+/* styles hamburger menu on mobile view */
+.navbar #hamburger-btn {
+  cursor: pointer;
+  display: none;
+}
+
+/* flexbox layout for nav links */
+.navbar .all-links {
+  display: flex;
+  align-items: center;
+}
+
+/* removes bullets & allows relative positioning */
+.navbar .all-links li {
+  position: relative;
+  list-style: none;
+}
+
+/* makes logo & text align horizontally */
+.navbar .logo a {
+  display: flex;
+  align-items: center;
+  margin-left: 0;
+}
+
+/* makes logo image round & aligned */
+.navbar .logo img {
+  width: 50px;
+  height: 50px;
+  margin-right: 10px;
+  border-radius: 50%;
+  background: transparent;
+}
+
+/* white links by default */
+header a, footer a {
+  margin-left: 40px;
+  text-decoration: none;
+  color: #fff;
+  height: 100%;
+  padding: 20px 0;
+  display: inline-block;
+}
+
+/* soft pink color on hover */
+header a:hover, footer a:hover {
+  color: #f1b7b9;
+}
+
+/* centers content & adds vertical spacing */
+section.about {
+  margin: 0 auto;
+  max-width: 1200px;
+}
+
+.about h3 {
+  margin: 5px 0 10px;
+}
+
+/* Color variables */
+:root {
+  --white-color: #fff;
+  --bg-color: #fff;
+  --gray-color: #ccc;
+}
+
+#about .img,
+#about img,
+.hire-text h2 {
+  position: relative;
+}
+
+/* Timeline background line */
+#about .img::before {
+  content: "";
+  left: 50%;
+  width: 4px;
+  position: absolute;
+  height: calc(100% + 100px);
+  background: var(--gray-color);
+}
+
+/* ensures the lines ends after future */
+#about .last-img::before {
+  display: none;
+}
+
+#about img,
+#about .hire-text h2 {
+  width: 140px;
+}
+
+#about .hire-text h2 {
+  height: 140px;
+}
+
+/* grey button with shadow that glows on hover */
+.btn {
+  color: #0c0b0b;
+  display: block;
+  text-transform: uppercase;
+  font-size: 18px;
+  margin: 0 10px;
+  padding: 10px 30px;
+  background: rgba(164, 153, 153, 0.5);
+  transition: 0.4s ease;
+  box-shadow: 0 10px 20px rgba(128, 128, 128, 0.5); /* Grey glow */
+}
+
+.btn:hover {
+  color: #ebf4f6;
+  background: rgba(210, 83, 83, 1);
+  box-shadow: 0 10px 20px rgba(202, 59, 80, 0.8); /* Light pink glow */
+}
+
+/* full-width black footer with padding & spacing above */
+footer {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  background: #000;
+  padding: 20px 0;
+  margin-top: 60px;
+  }
+  
+footer div {
+  padding: 0 10px;
+  max-width: 1200px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  }
+  
+footer span {  
+  color: #fff;
+}
+  
+footer a {
+  padding: 0;
+}
+  
+  /* turns nav menu to slide-in side menu, starts off hidden then takes
+  full height of screen with dark background to match desktop navbar */
+  @media screen and (max-width: 860px) {
+    .navbar .all-links {
+      position: fixed;
+      left: -100%;
+      width: 300px;
+      display: block;
+      height: 100vh;
+      top: 60px;
+      background: #333;
+      transition: left 0.3s ease;
+      padding-top: 100px;
+    }
+  
+  /* ~ connects checkbox and nav, so when it's checked, nav slides out */
+    .navbar #menu-toggler:checked~.all-links {
+      left: 0;
+    }
+    
+    .navbar #hamburger-btn {
+      display: block;
+    }
+  
+    section > p {
+      text-align: center;
+    }
+  
+  
+    .homepage .content h1 {
+      font-size: 40px;
+      font-weight: 700;
+      margin-bottom: 10px;
+    }
+  
+    .homepage .content .text {
+      font-size: 17px;
+    }
+  
+    .content a {
+      font-size: 17px;
+      padding: 9px 20px;
+    }
+  
+  /* stacks vertically instead of horizontally */
+    .contact .row {
+      flex-direction: column;
+    }
+  
+    .contact .row .col {
+      width: 100%;
+    }
+  
+    .contact .row .col:last-child {
+      margin-top: 40px;
+    }
+  
+    footer a {
+      height: 0;
+    }
+  }
+  
+  @media screen and (max-width: 560px) {
+    section .cards .card {
+      width: 100%;
+      margin-bottom: 30px;
+    }
+  }
